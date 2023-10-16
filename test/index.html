@@ -9,35 +9,75 @@
 	<script src="../lib/timecell.js"></script>
 	<script type="text/javascript">
 		let t = new TimeCell({});
-		console.log(t.tc(1697442756721))
-		// 刚刚
 
-		// 支持哪些时间格式？自动转时间戳
+		// 参数: 支持哪些时间格式？自动转时间戳
 		// new Date().getTime()
 		// 2023/10/16 10:00:23 
 		// 2023/10/16
 		// 2023
 		// 10/16
+		console.log(t.tc(1697442756721))
+		// log: 4小时前
+		console.log(t.tc('2023/10/16 10:00:23'))
+		// log: 10小时前
 
-		console.log(t.tc('2023-10-16 10:00:23'))
-		// 5小时以前
+		// 配置: 支持哪些语言?
+		// zh-cn 中文, 默认
+		// en-us 英文
+		t.setOptions({
+			lang: 'en-us'
+		})
+		console.log(t.tc('2023/10/16 10:00:23'))
+		// log: 10hrs ago
 
-		console.log(t.setOptions({
-			mode: 2,
+		t.setOptions({
 			lang: 'en-us',
-			debug: true
-		}).tc('2023/10/16 10:00:23')) 
-		// 5hrs 50mins ago
+			mode: 3
+		})
+		console.log(t.tc('2023/10/16 10:00:23'))
+		// 10:00
+		console.log(t.tc('2023/10/15 10:00:23'))
+		// Sun.10:00
+		t.setOptions({
+			lang: 'en-us',
+			mode: 4
+		})
+		console.log(t.tc('2023/10/16 10:00:23'))
+		// today10:00
+		console.log(t.tc('2023/10/15 10:00:23'))
+		// yesterday10:00
+		t.setOptions({
+			lang: 'en-us',
+			mode: 3
+		})
+		console.log(t.tc(1697421623000))
+		// 10hrs 56mins ago
+		console.log(t.tc('2023/10/08 10:00:23'))
+		// 1days 10hrs ago
 
-		console.log(t.tc('2023/10/17 10:00:23'))
-		//futrue 未来时间
-
-		// 1. 参数1可以传入时间格式
-		// 2. 参数2可以不传,默认为当前时间
-		console.log(t.tc('2023/10/13'))
-		// 3days 15hrs ago
-		console.log(t.tc('2022/9/13'))
-		// 1years 1months ago
+		// 配置: 支持哪些模式?
+		// 1 通用, 默认
+			// 1分钟内: 刚刚
+			// 1小时内: n分钟前
+			// 1天内: n小时前
+			// 1个月内: n天前
+			// 1年内: n月前
+			// 1年以上: n年前
+		// 2 精准的,
+			// 1分钟内: n秒前
+			// 1小时内: n分钟m秒前
+			// 1天内: n小时m分钟前
+			// 1个月内: n天m小时前
+			// 1年内: n月m天前
+			// 1年以上: n年m月前 
+		// 3 个性化-星期: 
+			// 1天内: 发布时间 08:03
+			// 1周内: 发布星期+发布时间 星期一08:03
+			// 其他时间: 发布日期+发布时间 10月16日08:03
+		// 4 个性化-今天和昨天: 
+			// 1天内: 今天+时间 今天08:03
+			// 2天内: 昨天+时间 昨天08:03
+			// 其他时间: 发布日期+发布时间 10月16日08:03
 	</script>
 </body>
 </html>
