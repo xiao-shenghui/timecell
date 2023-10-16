@@ -1,0 +1,25 @@
+{
+  "name": "timecell",
+  "version": "1.0.0",
+  "description": "",
+  "title": "TimeCell, Time-Cell Format Library, Mini JS Tool Library",
+  "main": "./lib/timecell.js",
+  "author": {
+    "name": "XiaoShenghui",
+    "email": "1653618993@qq.com"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "time",
+    "date",
+    "timecell",
+    "format"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiao-shenghui/timecell.git"
+  },
+  "license": "MIT"
+}
