@@ -4,6 +4,12 @@
   "description": "",
   "title": "TimeCell, Time-Cell Format Library, Mini JS Tool Library",
   "main": "./lib/timecell.js",
+  "types": "./lib/timecell.d.ts",
+  "exports": {
+    "types": "./lib/timecell.d.ts",
+    "node": "./lib/timecell.js",
+    "default": "./lib/timecell.js"
+  },
   "author": {
     "name": "XiaoShenghui",
     "email": "1653618993@qq.com"
