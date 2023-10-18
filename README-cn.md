@@ -6,6 +6,7 @@
 - 🚀 支持时间戳格式
 - 🚀 支持时间格式(字符串)
 - 💪 四种个性化模式(`1, 通用`/`2, 精细`/`3,个性化-星期`/`4,个性化-今天昨天`), 默认`通用`模式
+- 💪 支持Typescript 
 - 🌍 双语言(`zh-cn, 中`/`en-us, 英`), 默认`中文`
 - 🛠️ 支持随意`切换`语言和模式
 - 🍭 支持日期和时间自动`补0`
@@ -23,7 +24,7 @@ npm install timecell --save
 import TimeCell from 'timecell'
 let t = new TimeCell();
 console.log(t.tc('1697248859445', '2023/10/16 10:00:23'))
-// log: 5小时以前
+// log: 5小时前
 
 // 改变模式和语言
 t.setOptions({
@@ -44,7 +45,7 @@ console.log(t.tc('2022/9/13'))
 const TimeCell = require('timecell')
 let t = new TimeCell();
 console.log(t.tc('1697248859445', '2023/10/16 10:00:23'))
-// log: 5小时以前
+// log: 5小时前
 
 // ...和node module一样
 ```

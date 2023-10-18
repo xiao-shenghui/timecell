@@ -6,6 +6,7 @@ A minimalist time formatting library for calculating time.
 - 🚀 Support **timestamp** format 
 - 🚀 Support for time string format
 - 💪 **Four** Mode(`1: General`/`2: Detail`/`3: Personalization - Week`/`4: Personalization - Today & Yesterday`), default mode `1` 
+- 💪 Support Typescript
 - 🌍 Dual Lang(`zh-cn: Chinese`/`en-us: English`), default lang `zh-cn`
 - 🛠️ Support `switch` language and mode 
 - 🍭 Support auto **filling `0`** for date and time
@@ -23,7 +24,7 @@ npm install timecell --save
 import TimeCell from 'timecell'
 let t = new TimeCell();
 console.log(t.tc('1697248859445', '2023/10/16 10:00:23'))
-// log: 5小时以前
+// log: 5小时前
 
 // change mode and language
 t.setOptions({
