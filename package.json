@@ -1,6 +1,6 @@
 {
   "name": "timecell",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "",
   "title": "TimeCell, Time-Cell Format Library, Mini JS Tool Library",
   "main": "./lib/timecell.js",

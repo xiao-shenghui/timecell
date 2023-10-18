@@ -6,7 +6,7 @@ A minimalist time formatting library for calculating time.
 - 🚀 Support **timestamp** format 
 - 🚀 Support for time string format
 - 💪 **Four** Mode(`1: General`/`2: Detail`/`3: Personalization - Week`/`4: Personalization - Today & Yesterday`), default mode `1` 
-- 💪 Support Typescript
+- 💪 Support Typescript, with convenient tips and format checks.
 - 🌍 Dual Lang(`zh-cn: Chinese`/`en-us: English`), default lang `zh-cn`
 - 🛠️ Support `switch` language and mode 
 - 🍭 Support auto **filling `0`** for date and time
@@ -85,6 +85,11 @@ console.log(t.tc('2023/10/16 10:00:23'))
 console.log(t.tc('2023/10/15 10:00:23'))
 // yesterday10:00
 ```
+
+## Usage - Typescript
+- TS will auto import "timecell.d.ts" file.
+- Or copy content of **"timecell.d.ts"** to your project.
+
 ## Function Description
 ```js
 // Args: What formats are supported? Automatic timestamp conversion

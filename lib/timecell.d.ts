@@ -4,11 +4,11 @@ declare module 'timecell' {
         lang?: string,
         debug?: boolean
     }
-    export class TimeCell {
+    export default class TimeCell {
         constructor(o?: options);
         log(): void;
-        setOptions(o?: object): object;
+        setOptions(o?: options): object;
         timecell(start: string | number, end?: string | number): string;
         tc(start: string | number, end?: string | number): string;
     }
-}
+};
